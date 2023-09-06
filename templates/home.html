@@ -1,0 +1,14 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+
+</head>
+<body>
+<h1>welcome to python and django backend fullstack</h1>
+<button><a href="{% url 'create_view' %}">Create Employee</a></button>
+</body>
+</html>

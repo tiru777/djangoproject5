@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list view</title>
+</head>
+<body>
+<button><a href="{% url 'create_view' %}">Create Employee</a></button>
+
+{% for i in tiru %}
+    <h2>{{i.name}}</h2>
+    <h2>{{i.age}}</h2>
+    <h2>{{i.email}}</h2>
+<button type="button" class="btn btn-warning"><a href="{% url 'detailed_view' i.id %}"> Detailed View</a></button>
+<button type="button" class="btn btn-warning"><a href="{% url 'update_view' i.id %}"> Update View</a></button>
+<button type="button" class="btn btn-warning"><a href="{% url 'delete_view' i.id %}"> Delete View</a></button>
+
+{% endfor %}
+</body>
+
+
+
+</html>
